@@ -11,7 +11,7 @@ distancia.addEventListener("input", () => {
     led.style.background = "green";
     led.style.boxShadow = "0 0 20px green";
     led.classList.remove("vibrando");
-  } else if (valor < 5) {
+  } else if (valor < 6) {
     led.style.background = "yellow";
     led.style.boxShadow = "0 0 20px yellow";
     led.classList.remove("vibrando");
@@ -22,3 +22,4 @@ distancia.addEventListener("input", () => {
   }
 
 });
+
