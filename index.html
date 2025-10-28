@@ -2,61 +2,25 @@
 #include <BLEUtils.h>
 #include <BLEScan.h>
 
-#define LED_R 13
-#define LED_G 12
-#define LED_B 14
-#define MOTOR 27
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulseira de Proximidade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="pulseira">
+    <div class="led" id="led"></div>
+  </div>
 
-int distanceThreshold1 = -50;  // perto
-int distanceThreshold2 = -70;  // longe
+  <div class="controles">
+    <label for="distancia">Distância simulada:</label>
+    <input type="range" id="distancia" min="0" max="100" value="20" />
+    <p id="status">Distância: 20m</p>
+  </div>
 
-BLEScan* pBLEScan;
-
-void setup() {
-  Serial.begin(115200);
-  pinMode(LED_R, OUTPUT);
-  pinMode(LED_G, OUTPUT);
-  pinMode(LED_B, OUTPUT);
-  pinMode(MOTOR, OUTPUT);
-  
-  BLEDevice::init("");
-  pBLEScan = BLEDevice::getScan();
-  pBLEScan->setActiveScan(true);
-}
-
-void loop() {
-  BLEScanResults results = pBLEScan->start(1, false);
-  int bestRSSI = -999;
-
-  for (int i = 0; i < results.getCount(); i++) {
-    BLEAdvertisedDevice device = results.getDevice(i);
-    if (device.haveRSSI()) {
-      int rssi = device.getRSSI();
-      if (rssi > bestRSSI) bestRSSI = rssi;  // sinal mais forte = mais perto
-    }
-  }
-
-  if (bestRSSI > distanceThreshold1) {
-    // Verde: perto
-    setColor(0, 255, 0);
-    digitalWrite(MOTOR, LOW);
-  } else if (bestRSSI > distanceThreshold2) {
-    // Amarelo: média distância
-    setColor(255, 255, 0);
-    digitalWrite(MOTOR, LOW);
-  } else {
-    // Vermelho + vibração: longe
-    setColor(255, 0, 0);
-    digitalWrite(MOTOR, HIGH);
-    delay(500);
-    digitalWrite(MOTOR, LOW);
-  }
-
-  delay(1000);
-}
-
-void setColor(int r, int g, int b) {
-  analogWrite(LED_R, r);
-  analogWrite(LED_G, g);
-  analogWrite(LED_B, b);
-}
+  <script src="script.js"></script>
+</body>
+</html>

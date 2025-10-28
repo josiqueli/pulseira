@@ -1,0 +1,50 @@
+body {
+  background-color: #121212;
+  color: #f5f5f5;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.pulseira {
+  width: 200px;
+  height: 50px;
+  background: #333;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.led {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: green;
+  transition: background 0.4s, box-shadow 0.4s;
+}
+
+.vibrando {
+  animation: vibrar 0.15s infinite alternate;
+}
+
+@keyframes vibrar {
+  from { transform: translateX(-2px); }
+  to { transform: translateX(2px); }
+}
+
+.controles {
+  margin-top: 30px;
+  text-align: center;
+}
+
+input[type="range"] {
+  width: 300px;
+  margin-top: 10px;
+}
