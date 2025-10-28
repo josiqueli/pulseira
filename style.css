@@ -10,6 +10,13 @@ body {
   margin: 0;
 }
 
+.titulo {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
 .pulseira {
   width: 200px;
   height: 50px;
