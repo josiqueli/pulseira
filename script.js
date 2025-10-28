@@ -7,11 +7,11 @@ distancia.addEventListener("input", () => {
   status.textContent = `Distância: ${valor}m`;
 
   // Mudança de cor conforme a distância
-  if (valor < 30) {
+  if (valor < 3) {
     led.style.background = "green";
     led.style.boxShadow = "0 0 20px green";
     led.classList.remove("vibrando");
-  } else if (valor < 70) {
+  } else if (valor < 5) {
     led.style.background = "yellow";
     led.style.boxShadow = "0 0 20px yellow";
     led.classList.remove("vibrando");
@@ -20,4 +20,5 @@ distancia.addEventListener("input", () => {
     led.style.boxShadow = "0 0 25px red";
     led.classList.add("vibrando");
   }
+
 });
