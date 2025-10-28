@@ -49,6 +49,7 @@ body {
 .controles {
   margin-top: 30px;
   text-align: center;
+  status: 2m;
 }
 
 input[type="range"] {
@@ -56,3 +57,4 @@ input[type="range"] {
   margin-top: 10px;
 
 }
+
