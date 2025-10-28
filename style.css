@@ -18,10 +18,10 @@ body {
 }
 
 .pulseira {
-  width: 200px;
-  height: 50px;
+  width: 300px;
+  height: 100px;
   background: #333;
-  border-radius: 25px;
+  border-radius: 50px;
   position: relative;
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
   display: flex;
@@ -30,8 +30,8 @@ body {
 }
 
 .led {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: green;
   transition: background 0.4s, box-shadow 0.4s;
@@ -54,4 +54,5 @@ body {
 input[type="range"] {
   width: 300px;
   margin-top: 10px;
+
 }
