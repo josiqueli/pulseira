@@ -23,7 +23,7 @@ body {
   background: #333;
   border-radius: 25px;
   position: relative;
-  box-shadow: 0 0 15px rgba(15, 255, 15, 0.521);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.589);
   display: flex;
   align-items: center;
   justify-content: center;
