@@ -49,11 +49,10 @@ body {
 .controles {
   margin-top: 30px;
   text-align: center;
-  status: 2m;
 }
 
 input[type="range"] {
-  width: 300px;
+  width: 700px;
   margin-top: 10px;
 
 }
