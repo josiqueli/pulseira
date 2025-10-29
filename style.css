@@ -23,7 +23,7 @@ body {
   background: #333;
   border-radius: 25px;
   position: relative;
-  box-shadow: 0 0 15px rgba(15, 255, 15, 0.521);
+  box-shadow: 0 0 15px rgba(0, 253, 0, 0.452);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +33,7 @@ body {
   width: 50px;
   height: 27px;
   border-radius: 25%;
-  background: rgb(9, 182, 9);
+  background: rgb(50, 255, 50);
   transition: background 0.4s, box-shadow 0.4s;
 }
 
