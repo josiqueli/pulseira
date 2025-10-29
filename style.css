@@ -31,7 +31,7 @@ body {
 
 .led {
   width: 39px;
-  height: 37px;
+  height: 27px;
   border-radius: 25%;
   background: green;
   transition: background 0.4s, box-shadow 0.4s;
