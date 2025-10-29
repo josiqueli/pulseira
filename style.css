@@ -57,3 +57,35 @@ input[type="range"] {
 
 }
 
+/* Força o thumb a começar exatamente no início */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 300px;
+  height: 6px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #00ff88, #0099ff);
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Thumb (bolinha) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00ffcc;
+  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  cursor: pointer;
+  transform: translateX(0); /* força o início */
+  margin-top: -7px; /* centraliza verticalmente */
+}
+
+/* Remove qualquer espaçamento que atrase o início */
+input[type="range"]::-webkit-slider-runnable-track {
+  margin: 0;
+  padding: 0;
+}
