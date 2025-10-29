@@ -30,7 +30,7 @@ body {
 }
 
 .led {
-  width: 39px;
+  width: 90px;
   height: 27px;
   border-radius: 25%;
   background: green;
