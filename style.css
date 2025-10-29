@@ -77,7 +77,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #00ffcc;
+  background: #0a9478;
   box-shadow: 0 0 10px #1ebe9e, 0 0 20px #20a58a;
   cursor: pointer;
   transform: translateX(0); /* força o início */
